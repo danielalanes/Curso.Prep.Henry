@@ -4,7 +4,7 @@ function mayuscula(nombre) {
   //La función recibe un nombre y debe devolver el mismo que recibe pero con su primer letra en mayúscula
   //ej: Recibe "mario" ----> Devuelve "Mario"
   //Tu código:
-  
+  return nombre.charAt(0).toUpperCase() + nombre.slice(1);
 }
 
 function invocarCallback(cb) {
@@ -25,7 +25,12 @@ function sumarArray(numeros, cb) {
   // Pasa el resultado a `cb`
   // No es necesario devolver nada
   //Tu código:
-  
+  let sum = 0;
+
+  for (let i = 0; i < numeros.length; i ++) {
+    sum += numeros[i];
+  }
+  cb(sum);
 }
 
 function forEach(array, cb) {
